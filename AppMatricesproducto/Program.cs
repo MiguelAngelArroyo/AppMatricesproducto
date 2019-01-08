@@ -26,14 +26,27 @@ namespace AppMatricesproducto
             Console.WriteLine();
             int[][,] matriz = new int[3][,];
             inicializar(matriz);
-
+            Console.WriteLine();
+            int[][][] m1 = new int[3][][];
+            inicializar2(m1);
             Console.ReadKey();
+        }
+        public static void inicializar2(int [][][] m1)
+        {
+            m1[0]= new int [3,3,3];
+            m1[1]= new int [3,3,2];
+            m1[2]= new int [3,3,2];
+            Console.WriteLine("\nMultiplicación de matrices utilizando arreglos multidimensionales escalonados");
+            leer(m1[0]);
+            leer(m1[1]);
+            multi(m1[0], m1[1], m1[2]);
+            imprimir(m1[2]);
         }
         public static void inicializar(int[][,] matriz)
         {
-            matriz[0] = new int[3, 3];
-            matriz[1]=new int[3,2];
-            matriz[2] = new int[3, 2];
+            matriz[0]= new int[3, 3];
+            matriz[1]= new int[3, 2];
+            matriz[2]= new int[3, 2];
             Console.WriteLine("\nMultiplicacion de matrices utilizando dimenciones escalonadas y rectangular");
             leer(matriz[0]);
             leer(matriz[1]);
